@@ -17,8 +17,8 @@ jobs:
       - name: Setup NodeJS 💚
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
-          cache: "yarn"
+          node-version: '14'
+          cache: 'yarn'
 
       - name: Install, Build and Export 📦
         run: |
@@ -31,4 +31,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build
-          commit_message: "🚀 ${{ github.event.head_commit.message }}"
+          commit_message: '🚀 ${{ github.event.head_commit.message }}'

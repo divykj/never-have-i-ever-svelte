@@ -106,9 +106,9 @@
       </Tile>
       <p class="text-gray-500 text-xs text-right">{statements.length} left</p>
       <div class="flex flex-row space-x-2">
-        <Button kind="secondary" class="flex-1 !max-w-full" icon={Reset24} on:click={resetGame}
-          >Reset</Button
-        >
+        <Button kind="secondary" class="flex-1 !max-w-full" icon={Reset24} on:click={resetGame}>
+          Reset
+        </Button>
         {#if statements.length > 0}
           <Button class="flex-1" icon={ChevronRight24} on:click={selectNextStatement}>Next</Button>
         {/if}
