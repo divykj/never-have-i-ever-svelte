@@ -39,11 +39,7 @@
     gameLoading = true;
 
     const responseTexts = await Promise.all(
-      selectedCategoryIds.map((id) =>
-        fetch(
-          `${import.meta.env.PROD ? 'never-have-i-ever-svelte/' : ''}/data/${id}.txt`
-        ).then((response) => response.text())
-      )
+      selectedCategoryIds.map((id) => fetch(`data/${id}.txt`).then((response) => response.text()))
     );
 
     const newStatements = responseTexts
